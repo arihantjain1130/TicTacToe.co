@@ -7,175 +7,175 @@
     <title>TicTacTo </title>
 </head>
 <style>
-   * {
-    margin: 0;
-    padding: 0;
-}
+    * {
+        margin: 0;
+        padding: 0;
+    }
 
-body {
-    background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-    color: white;
-}
+    body {
+        background-color: #00DBDE;
+        background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        color: white;
+    }
 
-nav {
-    background-color: #00DBDE;
-    background-image: linear-gradient(95deg, #fffaba 0%, #007c40 100%);
-}
+    nav {
+        background-color: #00DBDE;
+        background-image: linear-gradient(95deg, #fffaba 0%, #007c40 100%);
+    }
 
-h1 {
-    padding: 9px 15px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    cursor: default;
-}
+    h1 {
+        padding: 9px 15px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        cursor: default;
+    }
 
-.start {
-    display: flex;
-    justify-content: center;
-    margin-top: 30%;
-    transition: 2s;
-}
+    .start {
+        display: flex;
+        justify-content: center;
+        margin-top: 30%;
+        transition: 2s;
+    }
 
-.start button {
-    background-color: #50ebff;
-    padding: 15px;
-    border-radius: 21px;
-    font-size: 30px;
-    transition: 3s;
-}
+    .start button {
+        background-color: #50ebff;
+        padding: 15px;
+        border-radius: 21px;
+        font-size: 30px;
+        transition: 3s;
+    }
 
-.start button:hover {
-    background-color: #1bfc9e;
-    padding: 15px;
-    border-radius: 32px;
-    font-size: 40px;
-    cursor: pointer;
-}
+    .start button:hover {
+        background-color: #1bfc9e;
+        padding: 15px;
+        border-radius: 32px;
+        font-size: 40px;
+        cursor: pointer;
+    }
 
-#panel {
-    display: none;
-}
+    #panel {
+        display: none;
+    }
 
-.game {
-    display: none;
-    justify-content: center;
-    margin-top: 20%;
-}
+    .game {
+        display: none;
+        justify-content: center;
+        margin-top: 20%;
+    }
 
-.center {
-    margin-top: 15%;
-}
+    .center {
+        margin-top: 15%;
+    }
 
-.align {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.turn-container {
-    width: 170px;
-    height: 80px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    position: relative;
-}
+    .turn-container {
+        width: 170px;
+        height: 80px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        position: relative;
+    }
 
-.turn-container h3 {
-    margin: 0;
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
+    .turn-container h3 {
+        margin: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 
-.turn-container .turn-box {
-    border: 3px solid #000;
-    font-size: 1.6rem;
-    font-weight: 700;
-}
+    .turn-container .turn-box {
+        border: 3px solid #000;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
 
-.turn-container .turn-box:nth-child(even) {
-    border-right: none;
-}
+    .turn-container .turn-box:nth-child(even) {
+        border-right: none;
+    }
 
-.bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 85px;
-    height: 40px;
-    background-color: #FF2E63;
-    z-index: -1;
-}
+    .bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 85px;
+        height: 40px;
+        background-color: #FF2E63;
+        z-index: -1;
+    }
 
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    height: 250px;
-    width: 250px;
-    margin: 30px auto;
-    border: 2px solid #000;
-}
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: 250px;
+        width: 250px;
+        margin: 30px auto;
+        border: 2px solid #000;
+    }
 
-.box {
-    cursor: pointer;
-    font-size: 2rem;
-    font-weight: 700;
-    border: 2px solid #000;
-}
+    .box {
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 700;
+        border: 2px solid #000;
+    }
 
-.box:hover {
-    background-color: #FF2E63;
-}
+    .box:hover {
+        background-color: #FF2E63;
+    }
 
-#play-again {
-    background-color: #FF2E63;
-    padding: 10px 25px;
-    border: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-}
+    #play-again {
+        background-color: #FF2E63;
+        padding: 10px 25px;
+        border: none;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+    }
 
-#play-again:hover {
-    padding: 10px 40px;
-    background-color: #08D9D6;
-    color: #000;
-}
+    #play-again:hover {
+        padding: 10px 40px;
+        background-color: #08D9D6;
+        color: #000;
+    }
 
-.over {
-    transition: 2s;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-top: -11px;
-    position: absolute;
-}
+    .over {
+        transition: 2s;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: -11px;
+        position: absolute;
+    }
 
-.over img {
-    width: 0;
-    transition: width 1s ease-in-out;
-}
+    .over img {
+        width: 0;
+        transition: width 1s ease-in-out;
+    }
 
-.ttt {
-    display: none;
-    text-align: center;
-    margin-top: -285px;
-    background: #000;
-    padding: 90px 6px;
-    position: relative;
-    width: 286px;
-}
+    .ttt {
+        display: none;
+        text-align: center;
+        margin-top: -285px;
+        background: #000;
+        padding: 90px 6px;
+        position: relative;
+        width: 286px;
+    }
 
-.tt {
-    justify-content: center;
-    display: flex;
+    .tt {
+        justify-content: center;
+        display: flex;
 
-}
+    }
 </style>
 
 <body>
@@ -213,29 +213,32 @@ h1 {
                 </div>
             </div>
         </div>
-
-        <audio src="http://sndup.net/mbtz" class="p1"></audio>
-        <audio src="http://sndup.net/mbtz"></audio>
-        <audio src="http://sndup.net/mbtz"></audio>
-        <audio src="http://sndup.net/mbtz"></audio>
+        <audio id="myAudio">
+            <source src="https://s31.aconvert.com/convert/p3r68-cdx67/obk5u-s5zmb.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudio1">
+            <source src="https://s31.aconvert.com/convert/p3r68-cdx67/jc7bs-lwhgi.mp3" type="audio/ogg">
+        </audio>
+        <audio id="myAudio2">
+            <source src="https://s31.aconvert.com/convert/p3r68-cdx67/3jv37-pfzwa.mp3" type="audio/ogg">
+        </audio>
     </div>
 
     </div>
 
 </body>
 <script>console.log("Welcome to Tic Tac Toe")
-    let music = new Audio("/music.mp3")
-    let audioTurn = new Audio("/ting.mp3")
-    let gameover = new Audio("/gameover.mp3")
-    let audio = document.getElementsByClassName("p1")
+    var m = document.getElementById("myAudio");
+    var y = document.getElementById("myAudio1");
+    var a = document.getElementById("myAudio2");
     let turn = "X"
     let isgameover = false;
 
     function myFunction(x) {
         x.style.display = "none";
-        audio.play();
+        m.play();
         document.getElementById("panel").style.display = "block";
-        if (music.play()) {
+        if (y.play()) {
 
         }
     }
@@ -264,7 +267,7 @@ h1 {
             turn = "X";
             document.querySelector(".bg").style.left = "0";
         }
-        audioTurn.play();
+        a.play();
     }
 
     function cheakWin() {
